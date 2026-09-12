@@ -1,7 +1,7 @@
 using System;
 using System.IO;
 
-// I added that when the files are saved, they are displayed when you enter the number 5.
+// I added that when the .txt files are saved, they are displayed when you enter the number 5.
 
 class Program
 {
