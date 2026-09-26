@@ -33,7 +33,7 @@ class Program
 
         order3.AddProduct(new Product("Backpack", "P07", 100.00, 1 ));
         order3.AddProduct(new Product("Notebook", "P08", 20.90, 5 ));
-        order3.AddProduct(new Product("colored pencil box", "P09", 30.00, 2 ));
+        order3.AddProduct(new Product("Colored Pencil Box", "P09", 30.00, 2 ));
 
         List<Order> orders = new List<Order>();
 

@@ -42,7 +42,7 @@ public class Order
 
         foreach (Product product in _products)
         {
-            label += $"{product.GetName()} - {product.GetProductId()}";
+            label += $"{product.GetName()} - {product.GetProductId()}\n";
         }
 
         return label;
@@ -50,6 +50,6 @@ public class Order
 
     public string GetShippingLabel()
     {
-       return $"{_customer.GetName()}, {_customer.GetAddress().GetFullAddress}";
+       return $"{_customer.GetName()}, {_customer.GetAddress().GetFullAddress()}";
     }
 }
