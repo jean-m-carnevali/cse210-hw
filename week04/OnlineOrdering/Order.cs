@@ -5,26 +5,51 @@ public class Order
 
     public Order(Customer customer)
     {
-        
+        _customer = customer;
+        _products = new List<Product>();
     }
 
     public void AddProduct(Product product)
     {
-        
+        _products.Add(product);
     }
 
     public double CalculateTotalPrice()
     {
-        
+        double total = 0;
+
+        foreach (Product product in _products)
+        {
+            total += product.GetTotalCost();
+        }
+
+        if (_customer.IsInUSA())
+        {
+            total += 5;
+        }
+
+        else
+        {
+            total += 35;
+        }
+
+        return total;
     }
 
     public string GetPackingLabel()
     {
-        
+        string label = "";
+
+        foreach (Product product in _products)
+        {
+            label += $"{product.GetName()} - {product.GetProductId()}";
+        }
+
+        return label;
     }
 
     public string GetShippingLabel()
     {
-        
+       return $"{_customer.GetName()}, {_customer.GetAddress().GetFullAddress}";
     }
 }
