@@ -13,9 +13,19 @@ public abstract class Goal
 
     public abstract void RecordEvent();
     public abstract bool IsComplete();
+    public virtual int GetPoints()
+    {
+        return _points;
+    }
+
     public virtual string GetDetailsString()
     {
-        return "";
+        return $"{_shortName} ({_description})";
+    }
+
+    public string GetSaveDetails()
+    {
+        return $"{_shortName}|{_description}|{_points}";
     }
 
     public abstract string GetStringRepresentation();
